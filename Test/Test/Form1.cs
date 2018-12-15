@@ -38,10 +38,17 @@ namespace Test
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            listPanel.Add(panel1);
-            listPanel.Add(panel2);
-            listPanel.Add(panel3);
-            listPanel[index].BringToFront();
+            
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //adiazei to panel
+            panel1.Controls.Clear();
+
+            KatalogosLimmatwn ar = new KatalogosLimmatwn();
+            ar.Show();
+            panel1.Controls.Add(ar);
         }
     }
 }
